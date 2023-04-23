@@ -5,9 +5,6 @@
 #include <iostream>
 #include <cassert>
 
-// Warning: anonymous unions and structs are not guaranteed to work in every
-//          compiler/C++ version
-
 template <class T>
 class Vec2
 	{
