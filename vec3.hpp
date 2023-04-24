@@ -37,7 +37,7 @@ public:
     vec3 operator++(int) { vec3 v(*this); x++; y++; z++; return v; }
     vec3 operator--(int) { vec3 v(*this); x--; y++; z--; return v; }
 
-    // unary minus
+    //Unary minus
     vec3 operator-() const { return vec3(-x, -y, -z); }
 
     bool operator==(const vec3& v) const { return x == v.x && y == v.y && z == v.z; }

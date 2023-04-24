@@ -39,7 +39,7 @@ public:
     vec2 operator++(int) { vec2 v(*this); x++; y++; return v; }
     vec2 operator--(int) { vec2 v(*this); x--; y++; return v; }
 
-    // unary minus
+    //Unary minus
     vec2 operator-() const { return vec2(-x, -y); }
 
     bool operator==(const vec2& v) const { return x == v.x && y == v.y; }
