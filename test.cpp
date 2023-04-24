@@ -2,8 +2,8 @@
 
 int main()
 {
-    Vec2 v1(1, 2);
-    Vec2 v2(3, 4);
+    Vec2 v1(1.0f, 2.0f);
+    Vec2 v2(3.0f, 4.0f);
     std::cout << v1 << std::endl;
     std::cout << v2 << std::endl;
     Vec2 v3 = v1 + v2;
