@@ -30,12 +30,17 @@ public:
     vec2 operator*(T s) const { return vec2(x * s, y * s); }
     vec2 operator/(T s) const { return vec2(x / s, y / s); }
 
+    //Scalar operations
+    friend vec2 operator*(T s, const vec2& v) { return vec2(s * v.x, s * v.y); }
+    friend vec2 operator/(T s, const vec2& v) { return vec2(s / v.x, s / v.y); }
+
     vec2& operator++() { ++x; ++y; return *this; }
     vec2& operator--() { --x; --y; return *this; }
     vec2 operator++(int) { vec2 v(*this); x++; y++; return v; }
     vec2 operator--(int) { vec2 v(*this); x--; y++; return v; }
 
-    vec2 operator-() const { return vec2(-x, -y); } // unary minus
+    // unary minus
+    vec2 operator-() const { return vec2(-x, -y); }
 
     bool operator==(const vec2& v) const { return x == v.x && y == v.y; }
     bool operator!=(const vec2& v) const { return x != v.x || y != v.y; }
