@@ -52,7 +52,5 @@ public:
 
     T& operator[](int i) { assert(i >= 0 && i < 2); return V[i]; }
     const T& operator[](int i) const { assert(i >= 0 && i < 2); return V[i]; }
-
-
 };
 typedef vec2<float> Vec2;
