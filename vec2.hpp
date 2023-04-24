@@ -55,5 +55,4 @@ public:
 
 
 };
-
 typedef vec2<float> Vec2;
