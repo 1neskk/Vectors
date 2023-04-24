@@ -15,7 +15,6 @@ int main()
     float length = v1.length();
     Vec2 v8 = v1.normalize();
     return 0;
-    //git test
 }
 
 //g++ test.cpp -o test
