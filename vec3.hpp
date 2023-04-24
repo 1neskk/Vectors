@@ -42,5 +42,24 @@ public:
 
     bool operator==(const vec3& v) const { return x == v.x && y == v.y && z == v.z; }
     bool operator!=(const vec3& v) const { return x != v.x || y != v.y || z != v.z; }
+
+    T dot(const vec3& v) const { return x * v.x + y * v.y + z * v.z; }
+    T length() const { return sqrt(x * x + y * y + z * z); }
+    vec3 normalize() const { return *this / length(); }
+
+    friend std::ostream& operator<<(std::ostream& os, const vec3& v)
+    {
+        os << "(" << v.x << ", " << v.y << ", " << v.z << ")";
+        return os;
+    }
+
+    friend std::istream& operator>>(std::istream& is, vec3& v)
+    {
+        is >> v.x >> v.y >> v.z;
+        return is;
+    }
+
+    T& operator[](int i) { return V[i]; }
+    const T& operator[](int i) const { return V[i]; }
 };
 typedef vec3<float> Vec3;

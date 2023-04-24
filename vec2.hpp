@@ -51,6 +51,12 @@ public:
         return os;
     }
 
+    friend std::istream& operator>>(std::istream& is, vec2& v)
+    {
+        is >> v.x >> v.y;
+        return is;
+    }
+
     T dot(const vec2& v) const { return x * v.x + y * v.y; }
     T length() const { return sqrt(x * x + y * y); }
     vec2& normalize() { *this /= length(); return *this; }
