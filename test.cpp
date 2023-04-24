@@ -16,5 +16,4 @@ int main()
     Vec2 v8 = v1.normalize();
     return 0;
 }
-
 //g++ test.cpp -o test
