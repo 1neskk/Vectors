@@ -1,4 +1,4 @@
-#include "vec2.hpp"
+#include "vec3.hpp"
 
 int main()
 {
