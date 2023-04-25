@@ -57,7 +57,8 @@ public:
         return is;
     }
 
-    T angle(const vec2& v) const { return acos(dot(v) / (length() * v.length())); }
+    T angleRad(const vec2& v) const { return acos(dot(v) / (length() * v.length())); }
+    T angleDeg(const vec2& v) const { return angle(v) * 180 / M_PI; }
     T dot(const vec2& v) const { return x * v.x + y * v.y; }
     T length() const { return sqrt(x * x + y * y); }
     vec2& normalize() { *this /= length(); return *this; }
