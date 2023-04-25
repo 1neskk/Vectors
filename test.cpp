@@ -2,9 +2,10 @@
 
 int main()
 {
-    Vec3 v1(7.350f, 0.221f, 5.188f);
-    Vec3 v2(2.751f, 8.259f, 3.985f);
-    std::cout << v1.angleDeg(v2) << std::endl;
+    Vec3 v1(8.462f, 7.893f, -8.187f);
+    Vec3 v2(6.984f, -5.975f, 4.778f);
+    std::cout << v1.cross(v2) << std::endl;
+    //std::cout << v2.normalize() << std::endl;
     
     return 0;
 }

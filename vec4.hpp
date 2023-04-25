@@ -46,7 +46,9 @@ public:
     T angleRad(const vec4& v) const { return acos(dot(v) / (length() * v.length())); }
     T angleDeg(const vec4& v) const { return angleRad(v) * 180 / M_PI; }
     T dot(const vec4& v) const { return x * v.x + y * v.y + z * v.z + w * v.w; }
+    vec4 cross(const vec4& v) const { return vec4(y * v.z - z * v.y, z * v.x - x * v.z, x * v.y - y * v.x, 0); }
     T length() const { return sqrt(x * x + y * y + z * z + w * w); }
+    vec4 proj(const vec4& v) const { return dot(v) / (length() * length()) * (*this); }
     vec4 normalize() const { return *this / length(); }
 
     friend std::ostream& operator<<(std::ostream& os, const vec4& v)

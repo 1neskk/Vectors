@@ -61,6 +61,7 @@ public:
     T angleDeg(const vec2& v) const { return angle(v) * 180 / M_PI; }
     T dot(const vec2& v) const { return x * v.x + y * v.y; }
     T length() const { return sqrt(x * x + y * y); }
+    vec2 proj(const vec2& v) const { return dot(v) / (length() * length()) * (*this); }
     vec2& normalize() { *this /= length(); return *this; }
 
     T& operator[](int i) { assert(i >= 0 && i < 2); return V[i]; }
