@@ -43,6 +43,7 @@ public:
     bool operator==(const vec4& v) const { return x == v.x && y == v.y && z == v.z && w == v.w; }
     bool operator!=(const vec4& v) const { return x != v.x || y != v.y || z != v.z || w != v.w; }
 
+    T angle(const vec4& v) const { return acos(dot(v) / (length() * v.length())); }
     T dot(const vec4& v) const { return x * v.x + y * v.y + z * v.z + w * v.w; }
     T length() const { return sqrt(x * x + y * y + z * z + w * w); }
     vec4 normalize() const { return *this / length(); }

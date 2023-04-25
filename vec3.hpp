@@ -43,6 +43,7 @@ public:
     bool operator==(const vec3& v) const { return x == v.x && y == v.y && z == v.z; }
     bool operator!=(const vec3& v) const { return x != v.x || y != v.y || z != v.z; }
 
+    T angle(const vec3& v) const { return acos(dot(v) / (length() * v.length())); }
     T dot(const vec3& v) const { return x * v.x + y * v.y + z * v.z; }
     T length() const { return sqrt(x * x + y * y + z * z); }
     vec3 normalize() const { return *this / length(); }
